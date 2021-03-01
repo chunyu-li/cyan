@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp">
+
+    <ImageView
+        android:id="@+id/imageViewMomentUser"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMomentUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:text="Jack"
+        android:textColor="@color/colorDarkCyan"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/imageViewMomentUser"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMomentContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Hello World!"
+        android:textColor="#161616"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/textViewMomentUser"
+        app:layout_constraintTop_toBottomOf="@id/textViewMomentUser" />
+
+    <ImageView
+        android:id="@+id/imageViewMomentPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="200dp"
+        android:maxHeight="200dp"
+        android:scaleType="centerInside"
+        app:layout_constraintLeft_toLeftOf="@id/textViewMomentContent"
+        app:layout_constraintTop_toBottomOf="@id/textViewMomentContent" />
+
+    <TextView
+        android:id="@+id/textViewMomentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:text="5 mins ago"
+        android:textColor="#BBBBBB"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/imageViewMomentPhoto"
+        app:layout_constraintTop_toBottomOf="@id/imageViewMomentPhoto" />
+
+    <TextView
+        android:id="@+id/textViewLike"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="0"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/textViewMomentTime"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewMomentTime" />
+
+    <ImageView
+        android:id="@+id/imageViewLike"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/like1"
+        app:layout_constraintBottom_toBottomOf="@id/textViewMomentTime"
+        app:layout_constraintRight_toLeftOf="@id/textViewLike"
+        app:layout_constraintTop_toTopOf="@id/textViewMomentTime" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#E4E4E4"
+        app:layout_constraintTop_toBottomOf="@id/textViewMomentTime" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

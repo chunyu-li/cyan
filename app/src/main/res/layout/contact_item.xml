@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textViewBlank"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#EEEEEE"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="A"
+        android:textColor="#878787"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageViewContact"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/viewContact"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewBlank" />
+
+    <TextView
+        android:id="@+id/textViewContact"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Jack"
+        android:textColor="#181818"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/viewContact"
+        app:layout_constraintLeft_toRightOf="@id/imageViewContact"
+        app:layout_constraintTop_toBottomOf="@id/textViewBlank" />
+
+    <View
+        android:id="@+id/viewContact"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="@id/textViewContact" />
+
+    <View
+        android:id="@+id/viewContactLeft"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/textViewContact" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

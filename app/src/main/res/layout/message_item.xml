@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageViewMessage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/user"
+        app:layout_constraintBottom_toTopOf="@id/viewLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMessageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="Jack"
+        android:textColor="#181818"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/imageViewMessage"
+        app:layout_constraintTop_toTopOf="@id/imageViewMessage" />
+
+    <TextView
+        android:id="@+id/textViewMessageContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="Hello, Li"
+        android:textColor="#B1B1B1"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewMessage"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@id/imageViewMessage"
+        app:layout_constraintRight_toLeftOf="@id/textViewMessagePrompt" />
+
+    <TextView
+        android:id="@+id/textViewMessagePrompt"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/prompt_bg"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="@id/textViewMessageContent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
